@@ -1,3 +1,10 @@
+Customised config, for use with my personal mod list (https://gamebanana.com/collections/71019)
+
+Focus is on a medium-low spec cartoon look, with enhanced sound and animations. Intended for Linux
+
+Below is original Comanglia readme for reference.
+
+
 I left a lot of settings that I believe to be entirely or almost completely user preference commented out.
 Hopefully this file can help you find what you may want/need to change.
 
