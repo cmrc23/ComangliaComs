@@ -1,6 +1,12 @@
 // ----------------------------------------------------------------------------
 // Sound
-// ----------------------------------------------------------------------------	
+// ---------------------------------------------------------------------------
+// attempt to enable OpenAL processing on Linux
+
+dsp_slow_cpu 0
+
+snd_spatialize_roundrobin 1	
+
 // ---------------
 // Sound Threading
 // ---------------
@@ -51,16 +57,9 @@ snd_pitchquality 0 				// Use linear mixer for sound, performance benefit
 // Adjust spatialization (sound travel and volume falloff) and DSP effects (sound filters)
 // ----------------------
 
-snd_spatialize_roundrobin 1 	// Spatialize sounds every 2 frames, less performance benefit.
-						//3 	// Spatialize sounds every 8 frames (2^3) using round-robin algorithm.
-									// Reasonable performance benefit, but delay in spatialization.
-						//0 	// Spatialize every frame
-						
 dsp_enhance_stereo 0 	// Disable extra spatial DSP effects and delays
 				// 1 	// Enable to apply spatial DSP effects to all channels 
 							// (for use with stereo, not surround sound)				
-dsp_slow_cpu 1 			// Disable initialization of enhanced spatialization
-		//   0 			// Use enhanced positional effects
 //dsp_room 0 			// Disable automatic DSP
 		// 1 			// Enable automatic DSP, adjusts DSP according to the room type/size you are in
 //dsp_facingaway 0 		// Disable the facing away DSP effect
